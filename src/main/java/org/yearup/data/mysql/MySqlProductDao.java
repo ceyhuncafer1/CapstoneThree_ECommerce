@@ -203,7 +203,10 @@ public class MySqlProductDao extends MySqlDaoBase implements ProductDao
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setInt(1, productId);
 
-            statement.executeUpdate();
+            int rowsAffected = statement.executeUpdate();
+            if(rowsAffected ==0){
+                throw new SQLException("Deleting product failed, no rows affected.");
+            }
         }
         catch (SQLException e)
         {
