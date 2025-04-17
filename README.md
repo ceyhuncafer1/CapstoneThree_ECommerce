@@ -127,6 +127,10 @@ PreparedStatement statement = connection.prepareStatement(sql);
 The website did not properly display products based on the price searching because there is only one parameter in the original code. 
 Meaning, there is no range. 
 
+So now it looks like this:
+
+![image](https://github.com/user-attachments/assets/293b25b2-5149-4fd1-b97e-f68e4285ef46)
+
 Here we can see the querystring paramaters do not match with the given syntax.
 
 ![image](https://github.com/ceyhuncafer1/CapstoneThree_ECommerce/assets/70558570/b8ff9ac0-6884-4622-9f7f-defca1c29799)
